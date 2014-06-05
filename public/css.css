@@ -4,8 +4,20 @@ body{
 	font-family: 'Architects Daughter', cursive;
 }
 
-header{
+a{
+	color:inherit;
+}
+
+
+
+header, footer{
 	text-align: center;
+}
+
+footer{
+	padding-top:25px;
+	color:#000;
+	line-height: 1.5em;
 }
 
 .container-fluid{
@@ -17,4 +29,18 @@ img{
 	border:solid;
 	border-color:#666;
 	border-style: double;
+}
+
+p.message-to-tap{
+	display:none;
+}
+
+@media(max-width: 480px){
+	p.message-to-tap{
+		display:inline;
+	}
+
+	p.message-to-hover{
+		display:none;
+	}
 }

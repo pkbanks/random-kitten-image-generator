@@ -30,12 +30,18 @@ function changeImage(image_container){
 	// set the max size equal to the size
 	// of the brower window,
 	// less the header,
-	// less a buffer
+	// less the footer
 	
 	var header_height = $("header").height();
+	var footer_height = $("footer").height();
 	
-	var vertical_max = $(window).height() - header_height - 50;
+	var vertical_max = $(window).height() - header_height - footer_height - 30;
 	var horizontal_max = $(window).width();
+
+	console.log("Window height: " + $(window).height());
+	console.log("Header height: " + header_height);
+	console.log("Footer height: " + footer_height);
+
 	
 	// arbitrary minimum image size is 200 x 200
 	var horizontal_min = 200;
