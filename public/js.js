@@ -18,6 +18,8 @@ $(function(){
 
 	var url = "http://placekitten.com/"
 
+	$()
+
 	$("img").mouseover(function(event){
 
 		image_container = event.target;
