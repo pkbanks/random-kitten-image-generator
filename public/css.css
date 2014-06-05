@@ -1,8 +1,20 @@
 
-input{
-	width: 250px;
+body{
+	background-color:#FFCCFF;
+	font-family: 'Architects Daughter', cursive;
 }
 
-input.red{
-	border-color:red;
+header{
+	text-align: center;
+}
+
+.container-fluid{
+	max-width: 800px;
+}
+
+img{
+	margin:auto;
+	border:solid;
+	border-color:#666;
+	border-style: double;
 }

@@ -3,9 +3,19 @@
 	<meta charset="UTF-8">
 	<title>placekitten, randomly</title>
 
-	<!-- CSS -->
+	<!-- fit precisely on mobile devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS reset -->
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<!-- Custom CSS -->
 	<link type="text/css" rel="stylesheet" href="css.css">
-	
+	<!-- Google fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+
 	<!-- import jQuery -->
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	
@@ -15,13 +25,7 @@
 </head>
 
 <body>
-<h1>jQuery Homework</h1>
-
-<h3>Problem 3 - PlaceKitten</h3>
-
-<p>Create an HTML document displaying a placekitten image. Then add some unobtrusive JavaScript so that, when I mouseover the image, I get a randomly generated new kitten image.</p>
-
-<dl>
+<!-- <dl>
 <h3>Window dimensions</h3>
 <dt>Horizontal:</dt>
 <dd class="window-horizontal">200</dd>
@@ -37,8 +41,13 @@
 <dd class="image-vertical">400</dd>
 </dl>
 
-<div>
-	<img src="http://placekitten.com/200/400">
+ -->
+ <div class="container-fluid">
+ 		<header>
+ 			<h1>Placekitten</h1>
+ 		</header>
+	 	<img class="img-responsive">
+	</div>
 </div>
 
 </body>

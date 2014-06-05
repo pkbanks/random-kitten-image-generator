@@ -3,34 +3,14 @@ $(function(){
 
 	var image_container;
 
-	var random_horizontal = 100;
-	var random_vertical = 100;
-
-	var horizontal_min = 200;
-	var horizontal_max = 800;
-	var vertical_min = 200;
-	var vertical_max = 800;
-
-	var horizontal_max = $(window).width();
-	var vertical_max = $(window).height();
-
-	var random_number = 0;
-
-	var url = "http://placekitten.com/"
-
-	$()
+	changeImage($("img"));
 
 	$("img").mouseover(function(event){
+		changeImage(event.target);
+	});
 
-		image_container = event.target;
-
-		random_horizontal = randomIntegerBetween(horizontal_min, horizontal_max);
-		random_vertical = randomIntegerBetween(vertical_min, vertical_max);
-		
-		$(".image-horizontal").text(random_horizontal + "px");
-		$(".image-vertical").text(random_vertical + "px");
-
-		$(image_container).attr("src",url + random_horizontal + "/" + random_vertical);
+	$("img").click(function(event){
+		changeImage(event.target);
 	});
 
 	$(window).resize(function(event){
@@ -41,6 +21,39 @@ $(function(){
 		$(".window-vertical").text(height + "px");
 	});
 });
+
+function changeImage(image_container){
+
+	// source of images
+	var url = "http://placekitten.com/"
+
+	// set the max size equal to the size
+	// of the brower window,
+	// less the header,
+	// less a buffer
+	
+	var header_height = $("header").height();
+	
+	var vertical_max = $(window).height() - header_height - 50;
+	var horizontal_max = $(window).width();
+	
+	// arbitrary minimum image size is 200 x 200
+	var horizontal_min = 200;
+	var vertical_min = 200;
+	
+	// variables for storing the randomly generated dimensions
+	var random_horizontal;
+	var random_vertical;
+
+	// generate and store random dimensions
+	random_horizontal = randomIntegerBetween(horizontal_min, horizontal_max);
+	random_vertical = randomIntegerBetween(vertical_min, vertical_max);
+	
+	// set the src attribute to refresh the image
+	$(image_container).attr("src",url + random_horizontal + "/" + random_vertical);
+
+
+}
 
 
 function randomIntegerBetween(min_val, max_val){
