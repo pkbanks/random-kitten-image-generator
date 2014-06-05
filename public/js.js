@@ -35,7 +35,7 @@ function changeImage(image_container){
 	var header_height = $("header").height();
 	var footer_height = $("footer").height();
 	
-	var vertical_max = $(window).height() - header_height - footer_height - 30;
+	var vertical_max = $(window).height() - header_height - footer_height;
 	var horizontal_max = $(window).width();
 
 	console.log("Window height: " + $(window).height());
