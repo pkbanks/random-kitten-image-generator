@@ -2,13 +2,19 @@
 $(function(){
 
 	var image_container;
+
 	var random_horizontal = 100;
 	var random_vertical = 100;
 
-	var random_number = 0;
+	var horizontal_min = 200;
+	var horizontal_max = 800;
+	var vertical_min = 200;
+	var vertical_max = 800;
 
-	var val_1;
-	var val_2;
+	var horizontal_max = $(window).width();
+	var vertical_max = $(window).height();
+
+	var random_number = 0;
 
 	var url = "http://placekitten.com/"
 
@@ -16,8 +22,8 @@ $(function(){
 
 		image_container = event.target;
 
-		random_horizontal = randomIntegerBetween(200, 800);
-		random_vertical = randomIntegerBetween(200, 800);
+		random_horizontal = randomIntegerBetween(horizontal_min, horizontal_max);
+		random_vertical = randomIntegerBetween(vertical_min, vertical_max);
 		
 		$(".image-horizontal").text(random_horizontal + "px");
 		$(".image-vertical").text(random_vertical + "px");
