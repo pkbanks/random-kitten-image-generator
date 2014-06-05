@@ -32,6 +32,14 @@ $(function(){
 
 		$(image_container).attr("src",url + random_horizontal + "/" + random_vertical);
 	});
+
+	$(window).resize(function(event){
+		windowObject = $(event.target)
+		width = $(windowObject).width();
+		height = $(windowObject).height();
+		$(".window-horizontal").text(width + "px");
+		$(".window-vertical").text(height + "px");
+	});
 });
 
 
